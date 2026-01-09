@@ -31,4 +31,4 @@ while True:
             print("Błąd: Nieznany operator")
             
     except ValueError:
-        print("Błąd: Proszę wpisywać tylko liczby!")
+        print("Błąd: Proszę wpisywać tylko liczby")
