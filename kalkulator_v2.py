@@ -32,3 +32,5 @@ while True:
             
     except ValueError:
         print("Błąd: Proszę wpisywać tylko liczby")
+
+# Komentarz zostawiony przez Macieja Jakubowskiego.
