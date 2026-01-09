@@ -1,14 +1,34 @@
-num1 = float(input("Wpisz pierwszą liczbę: "))
-op = input("Wpisz operator (+, -, *, /): ")
-num2 = float(input("Wpisz drugą liczbę: "))
+print("--- Prosty Kalkulator (wpisz 'exit' aby zakończyć) ---")
 
-if op == "+":
-    print(num1 + num2)
-elif op == "-":
-    print(num1 - num2)
-elif op == "*":
-    print(num1 * num2)
-elif op == "/" and num2 != 0:
-    print(num1 / num2)
-else:
-    print("Błąd")
+while True:
+    # Pobieramy pierwszą liczbę (z obsługą wyjścia)
+    wejscie = input("\nWpisz pierwszą liczbę (lub 'exit'): ")
+    if wejscie.lower() == 'exit':
+        print("Do widzenia!")
+        break
+
+    try:
+        num1 = float(wejscie)
+        op = input("Wpisz operator (+, -, *, /, ^): ") # Dodałem ^ jako symbol potęgi
+        num2 = float(input("Wpisz drugą liczbę: "))
+
+        if op == "+":
+            print(f"Wynik: {num1 + num2}")
+        elif op == "-":
+            print(f"Wynik: {num1 - num2}")
+        elif op == "*":
+            print(f"Wynik: {num1 * num2}")
+        elif op == "/":
+            if num2 == 0:
+                print("Błąd: Nie można dzielić przez zero!")
+            else:
+                print(f"Wynik: {num1 / num2}")
+        elif op == "^":
+            # To jest nowa funkcja potęgowania
+            # W Pythonie używamy ** do potęgowania
+            print(f"Wynik: {num1 ** num2}") 
+        else:
+            print("Błąd: Nieznany operator")
+            
+    except ValueError:
+        print("Błąd: Proszę wpisywać tylko liczby!")
