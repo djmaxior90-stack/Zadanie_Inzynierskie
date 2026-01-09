@@ -1,39 +1,30 @@
-# Prosty Kalkulator w Pythonie 🧮
+# Dokumentacja Projektu: Kalkulator
 
-Projekt prostego kalkulatora konsolowego stworzony w języku Python. Program umożliwia wykonywanie podstawowych operacji matematycznych.
+W tym repozytorium znajdują się dwie wersje kalkulatora napisanego w Pythonie. Poniżej opisano różnice między nimi oraz wprowadzone modyfikacje.
 
-## 📂 Struktura plików
-W tym repozytorium znajdują się dwie wersje programu:
+## 📂 Pliki w projekcie
 
-* `kalkulator_v1.py` - Pierwotna, podstawowa wersja kalkulatora.
-* `kalkulator_v2.py` - **Rozbudowana wersja** z nowymi funkcjami (aktualna).
-
----
-
-## 📝 Dziennik Zmian (Modyfikacje)
-
-Poniżej znajduje się lista modyfikacji wprowadzonych względem pierwotnej wersji programu.
-
-### Aktualizacja do wersji 2.0:
-W pliku `kalkulator_v2.py` wprowadzono następujące ulepszenia:
-
-1.  **Dodano funkcję potęgowania:**
-    * Zaimplementowano nowy operator `^`.
-    * Użytkownik może teraz podnosić pierwszą liczbę do potęgi drugiej liczby.
-    
-2.  **Wprowadzono pętlę działania (`while True`):**
-    * Kalkulator nie wyłącza się po jednym obliczeniu.
-    * Dodano komendę `exit`, która pozwala bezpiecznie zakończyć działanie programu.
-
-3.  **Poprawiono obsługę błędów:**
-    * Dodano blok `try-except`, który zapobiega awarii programu, gdy użytkownik wpisze tekst zamiast liczby.
-    * Dodano czytelniejsze komunikaty błędów (np. przy dzieleniu przez zero).
+* **`kalkulator_v1.py`** – Pierwotna, podstawowa wersja programu. Obsługuje tylko pojedyncze działania (+, -, *, /).
+* **`kalkulator_v2.py`** – Rozbudowana wersja z nowymi funkcjami (szczegóły poniżej).
 
 ---
 
-## 🚀 Jak uruchomić?
+## 📝 Dziennik Zmian (Changelog)
 
-Aby uruchomić nową wersję kalkulatora, wpisz w terminalu:
+W pliku `kalkulator_v2.py` wprowadzono następujące modyfikacje względem oryginału:
 
-```bash
-python kalkulator_v2.py
+### 1. Nowa funkcja matematyczna: Potęgowanie
+* **Co zmieniono:** Dodano obsługę operatora `^`.
+* **Jak to działa:** Program pobiera dwie liczby i wykonuje działanie potęgowania (liczba1 do potęgi liczba2) przy użyciu składni `**`.
+
+### 2. Praca w pętli (Ciągłe działanie)
+* **Co zmieniono:** Cały kod zamknięto w pętli `while True`.
+* **Cel:** W starej wersji program kończył się po jednym wyniku. Teraz pozwala na wykonywanie wielu obliczeń bez konieczności ponownego uruchamiania.
+
+### 3. Komenda wyjścia
+* **Co zmieniono:** Dodano instrukcję warunkową sprawdzającą, czy użytkownik wpisał słowo `exit`.
+* **Cel:** Umożliwia bezpieczne i kontrolowane zakończenie działania pętli i programu.
+
+### 4. Zabezpieczenie przed błędami (Error Handling)
+* **Co zmieniono:** Dodano blok `try...except`.
+* **Cel:** Jeśli użytkownik wpisze litery zamiast cyfr, stara wersja wyrzucała błąd systemowy. Nowa wersja wyświetla przyjazny komunikat "Proszę wpisywać tylko liczby" i pozwala spróbować ponownie.
